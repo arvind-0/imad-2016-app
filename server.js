@@ -1,5 +1,8 @@
+//used to create the web server
 var express = require('express');
+//output logs
 var morgan = require('morgan');
+
 var path = require('path');
 
 var app = express();
