@@ -17,6 +17,47 @@ var content = {
               <p>Its was great hanging out with you!</p>`
 };
 
+function createTemplate(data)
+{
+var title=data.title;
+var heading=data.heading;
+var date=data.date;
+var content=data.content;
+var htmlTemplate =
+`<html>
+    <head>
+        <title>
+            ${title}
+        </title>
+    <meta name="viewport" content="width-device-width, initial-scale-1" />
+    <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    
+    <body>
+        <div  class="container">
+            <div>
+                <a href="/">HOME</a>
+            </div>
+                <hr/>
+                <h3>
+                   ${heading}
+                </h3>
+                <p>${date}</p>
+            <div>
+                October,1,2016
+            </div>
+            <div>
+                ${content}
+                <hr/>
+            </div>
+        </div>
+    </body>
+</html>`;
+
+    return htmlTemplate;
+    
+};
+
 
 
 
