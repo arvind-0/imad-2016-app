@@ -9,7 +9,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var content = {
+var articleOne = {
     title:'Article One',
     heading:'Noob heading',
     date:'Sep 05 16',
@@ -56,7 +56,7 @@ var htmlTemplate =
 
     return htmlTemplate;
     
-};
+}
 
 
 
@@ -66,7 +66,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
-res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+res.send(createTemplate(articleOne));
 });
 
 app.get('/article-three',function(req,res)
